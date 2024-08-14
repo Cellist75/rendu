@@ -1,0 +1,5 @@
+# config/packages/dev/routing.yaml
+when@test:
+    routing:
+        resource: .
+        type: annotation

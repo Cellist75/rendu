@@ -1,0 +1,6 @@
+# config/packages/cache.yaml
+framework:
+    cache:
+        app: cache.adapter.filesystem
+        system: cache.adapter.system
+        directory: '%kernel.cache_dir%/pools'

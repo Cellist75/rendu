@@ -1,0 +1,30 @@
+# config/packages/framework.yaml
+framework:
+    secret: '%env(APP_SECRET)%'
+    http_method_override: true
+
+    session:
+        handler_id: null
+        cookie_secure: auto
+        cookie_samesite: lax
+
+    router:
+        utf8: true
+
+    csrf_protection: true
+
+    translator:
+        enabled: true
+        default_path: '%kernel.project_dir%/translations'
+
+    validation: { enable_annotations: true }
+
+    serializer: { enable_annotations: true }
+
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+
+    profiler: { only_exceptions: false }
+
+    annotations:
+        enabled: true

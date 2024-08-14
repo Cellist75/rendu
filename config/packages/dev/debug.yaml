@@ -1,0 +1,12 @@
+# config/packages/dev/debug.yaml
+when@test:
+    services:
+        _defaults:
+            public: false
+            autowire: true
+            autoconfigure: true
+
+        # Profiler service
+        profiler:
+            resource: '@Profiler'
+            public: true

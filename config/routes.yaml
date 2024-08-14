@@ -1,0 +1,14 @@
+# config/routes.yaml
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+# Inclure d'autres fichiers de route si nécessaire
+app:
+    resource: '../src/Controller/'
+    type: annotation
+
+# Pour charger des routes spécifiques selon l'environnement
+when@test:
+    resource: test_routes.yaml
+    type: glob

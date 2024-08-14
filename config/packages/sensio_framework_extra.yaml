@@ -1,0 +1,10 @@
+# config/packages/sensio_framework_extra.yaml
+sensio_framework_extra:
+    view:
+        annotations: false
+    router:
+        annotations: true
+    request:
+        converters: true
+    security:
+        annotations: true

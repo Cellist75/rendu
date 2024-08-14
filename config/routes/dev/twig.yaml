@@ -1,0 +1,4 @@
+# config/routes/twig.yaml
+twig:
+    resource: '../../templates/'
+    type: glob

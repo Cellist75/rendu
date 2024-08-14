@@ -1,0 +1,5 @@
+# config/packages/routing.yaml
+when@dev:
+    router:
+        resource: '%kernel.project_dir%/config/routes.yaml'
+        type: glob

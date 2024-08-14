@@ -1,0 +1,7 @@
+# config/packages/dev/easy_log_handler.yaml
+services:
+    Eko\EasyLog\Handler\EchoHandler:
+        arguments:
+            $levels: ['warning', 'error', 'critical']
+        tags:
+            - { name: monolog.handler, handler: easy_log_handler }

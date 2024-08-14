@@ -1,0 +1,45 @@
+# config/packages/framework.yaml
+framework:
+    secret: '%env(APP_SECRET)%'
+    http_method_override: true
+
+    # Cache configuration
+    cache:
+        app: cache.adapter.filesystem
+        system: cache.adapter.system
+        directory: '%kernel.cache_dir%/pools'
+
+    # PHP sessions
+    session:
+        handler_id: null
+        cookie_secure: auto
+        cookie_samesite: lax
+
+    # Router configuration
+    router:
+        utf8: true
+
+    # CSRF protection
+    csrf_protection: true
+
+    # Translations
+    translator:
+        enabled: true
+        default_path: '%kernel.project_dir%/translations'
+
+    # Validation
+    validation: { enable_annotations: true }
+
+    # Serializer
+    serializer: { enable_annotations: true }
+
+    # Mailer configuration (si vous avez migré à Symfony Mailer)
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+
+    # Profiler (environnement dev)
+    profiler: { only_exceptions: false }
+
+    # Enabling annotations
+    annotations:
+        enabled: true

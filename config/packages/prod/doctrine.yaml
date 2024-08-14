@@ -1,0 +1,20 @@
+# config/packages/doctrine.yaml
+doctrine:
+    dbal:
+        url: '%env(resolve:DATABASE_URL)%'
+        # Si vous utilisez une version récente de Doctrine, vous pouvez supprimer les options ci-dessous
+        # driver: 'pdo_mysql'
+        # server_version: '5.7'  # Adapter à votre version de MySQL ou autre SGBD
+        # charset: UTF8
+
+    orm:
+        auto_generate_proxy_classes: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+        auto_mapping: true
+        mappings:
+            App:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App

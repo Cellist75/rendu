@@ -1,0 +1,8 @@
+# config/packages/web_profiler.yaml
+web_profiler:
+    toolbar: true
+    intercept_redirects: false
+
+    # If you want to enable the Profiler in non-dev environments
+    enabled: '%kernel.debug%'
+    excluded_ajax_paths: '^/api'
